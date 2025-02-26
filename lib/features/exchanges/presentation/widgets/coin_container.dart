@@ -33,7 +33,7 @@ class CoinContainer extends StatelessWidget {
           Text(
             coin.symbol,
             style: TextStyle(
-              color: Colors.black,
+              color: Color(0xff17171A),
               fontWeight: FontWeight.w600,
               fontSize: 16,
             ),
@@ -45,7 +45,7 @@ class CoinContainer extends StatelessWidget {
               symbol: '\$',
             ).format(coin.priceUsd),
             style: TextStyle(
-              color: Colors.black,
+              color: Color(0xff17171A),
               fontWeight: FontWeight.w600,
               fontSize: 16,
             ),
