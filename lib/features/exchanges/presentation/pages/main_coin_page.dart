@@ -16,6 +16,7 @@ class _MainCoinPageState extends ConsumerState<MainCoinPage> {
     var coins = ref.watch(coinProvider);
 
     return Scaffold(
+      backgroundColor: Colors.white,
       body: RefreshIndicator(
         child:
             coins == null

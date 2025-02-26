@@ -2,6 +2,7 @@ import 'dart:math';
 
 import 'package:achconit_task/features/exchanges/data/entity/coin_data.dart';
 import 'package:flutter/material.dart';
+import 'package:intl/intl.dart';
 
 class CoinContainer extends StatelessWidget {
   final CoinData coin;
@@ -34,16 +35,19 @@ class CoinContainer extends StatelessWidget {
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w600,
-              fontSize: 18,
+              fontSize: 16,
             ),
           ),
           Spacer(),
           Text(
-            '${coin.priceUsd?.toStringAsFixed(2)}\$',
+            NumberFormat.currency(
+              locale: 'en_US',
+              symbol: '\$',
+            ).format(coin.priceUsd),
             style: TextStyle(
               color: Colors.black,
               fontWeight: FontWeight.w600,
-              fontSize: 18,
+              fontSize: 16,
             ),
           ),
         ],
